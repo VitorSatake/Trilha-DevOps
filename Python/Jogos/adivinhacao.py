@@ -1,18 +1,25 @@
-print('*********************************')
-print('Bem vindo ao jogo de adivinhação!')
-print('*********************************')
+print("*********************************")
+print("Bem vindo ao jogo de Adivinhação!")
+print("*********************************")
 
 numero_secreto = 42
 
-numero_usuario = int(input('Digite o seu numero:'))
+chute_str = input("Digite o seu número: ")
+print("Você digitou " , chute_str)
+chute = int(chute_str)
 
-if(numero_secreto == numero_usuario):
-    print('ACERTOU!')
+acertou = chute == numero_secreto
+maior = chute > numero_secreto
+menor = chute < numero_secreto
+
+if(acertou):
+    print("Parabéns! Você acertou!")
 else:
-    print('Numero errado!')
-    
+    if(maior):
+        print("O seu chute foi maior do que o número secreto!")
+    elif(menor):
+        print("O seu chute foi menor do que o número secreto!")
 
-
-
+print("Fim do jogo")
 
     
